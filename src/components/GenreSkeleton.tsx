@@ -1,5 +1,4 @@
 import { HStack, ListItem, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
-import useData from '../hooks/useData';
 import useGenres from '../hooks/useGenres';
 
 
