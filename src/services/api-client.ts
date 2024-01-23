@@ -2,15 +2,9 @@ import axios, { AxiosRequestConfig } from "axios";
 
 export interface FetchResponse<T> {
     count: number,
+    next: string | null, 
     results: T[]
 }
-
-// export default axios.create({
-//     baseURL: "https://api.rawg.io/api",
-//     params: {
-//         key: "ed36045d5a704346b58a28d442ce857c"
-//     }
-// })
 
 export const axiosInstance =  axios.create({
     baseURL: "https://api.rawg.io/api",
@@ -20,7 +14,7 @@ export const axiosInstance =  axios.create({
 })
 
 class APIClient<T>{
-    endpoint: string
+    endpoint: string;
 
     constructor(endpoint: string){
         this.endpoint = endpoint
