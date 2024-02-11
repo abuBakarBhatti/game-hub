@@ -3,12 +3,16 @@ import ms from "ms"
 import APIClient, { FetchResponse } from '../services/api-client'
 import { Platform } from './usePlatforms'
 import useGameQueryStore from '../store'
+import { ReactNode } from 'react'
 
 const apiClient = new APIClient<Game>("/games")
 
 export interface Game{
+  description_raw: string,
+  // description_raw: ReactNode
   id: number, 
   name: string,
+  slug: string, 
   background_image: string,
   parent_platforms: {platform: Platform}[],
   metacritic: number, 

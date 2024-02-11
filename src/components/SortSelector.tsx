@@ -5,7 +5,6 @@ import useGameQueryStore from '../store'
 
 
 const SortSelector = () => {
-
   const sortOrder = useGameQueryStore(s => s.gameQuery.sortOrder)
   const setSortOrder = useGameQueryStore(s => s.setSortOrder)
 
